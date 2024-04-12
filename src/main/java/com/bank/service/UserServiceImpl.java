@@ -73,4 +73,14 @@ public class UserServiceImpl implements UserService {
 		return userDTO;
 	}
 	
+	@Override
+	public User findByEmail(User user) {
+		return userDao.findByEmailAndRole(user.getEmail(),UserRole.ROLE_USER);
+	}
+
+	@Override
+	public Optional<User> findByEmail(String email) {
+		return userDao.findByEmail(email);
+	}
+	
 }

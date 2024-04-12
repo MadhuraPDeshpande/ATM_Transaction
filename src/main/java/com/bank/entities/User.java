@@ -33,7 +33,10 @@ public class User {
 	
 	private Double balance;
 	
+    private String email;
+	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "role")
     private UserRole role;
+	
 }
